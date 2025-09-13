@@ -12,6 +12,6 @@ fun main(){
 
 //    println("Количество работников интернет-магазина: $employeeCounter")
 
-    employeeCounter--
+    employeeCounter -= 1u
     println("К сожалению, один работник уволился. Количество работников интернет-магазина теперь: $employeeCounter")
 }
