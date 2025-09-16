@@ -3,11 +3,14 @@ package org.example.lesson_1
 fun main() {
 
     val fullTime = 6480
-    val hours = fullTime/3600
-    val minutes = (fullTime-hours.toInt()*3600)/60
-    val seconds = fullTime-hours.toInt()*3600-minutes.toInt()*60
+    val hours = fullTime / HOUR
+    val minutes = fullTime % HOUR / MINUTE
+    val seconds = fullTime % MINUTE
 
     // посмотрел функционал format() в предыдущес уроке, пригодилось)
-    println("Время в космосе: ${"%02d".format(hours)}:${"%02d".format(minutes)}:${"%02d".format(seconds)}")
+    println("Время в космосе: ${"%02d:%02d:%02d".format(hours, minutes, seconds)}")
 
 }
+
+const val MINUTE = 60
+const val HOUR = 3600
