@@ -2,15 +2,17 @@ package org.example.lesson_2
 
 fun main() {
 
-    val crystallineOre: Int = 7     // количество кристаллической руды
-    val ironOre: Int = 11           // количество железной руды
-    val buff: Int = 20              // бафф на ресурсы в процентах
+    val crystallineOre: Int = 7
+    val ironOre: Int = 11
+    val buff: Int = 20
 
-    val extraCrystallineOre = (crystallineOre*buff/100).toInt()
-    val extraIronOre = (ironOre*buff/100).toInt()
+    val extraCrystallineOre = (crystallineOre*buff/PERCENTAGE).toInt()
+    val extraIronOre = (ironOre*buff/PERCENTAGE).toInt()
     println("""
         После бафа!
         количество дополнительной кристаллической руды: $extraCrystallineOre
         количество дополнительной железной руды: $extraIronOre
     """.trimIndent())
 }
+
+const val PERCENTAGE = 100
