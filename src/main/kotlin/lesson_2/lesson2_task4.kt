@@ -6,13 +6,15 @@ fun main() {
     val ironOre: Int = 11
     val buff: Int = 20
 
-    val extraCrystallineOre = (crystallineOre*buff/PERCENTAGE).toInt()
-    val extraIronOre = (ironOre*buff/PERCENTAGE).toInt()
-    println("""
+    val extraCrystallineOre = (crystallineOre * buff / PERCENTAGE).toInt()
+    val extraIronOre = (ironOre * buff / PERCENTAGE).toInt()
+    println(
+        """
         После бафа!
         количество дополнительной кристаллической руды: $extraCrystallineOre
         количество дополнительной железной руды: $extraIronOre
-    """.trimIndent())
+    """.trimIndent()
+    )
 }
 
 const val PERCENTAGE = 100
