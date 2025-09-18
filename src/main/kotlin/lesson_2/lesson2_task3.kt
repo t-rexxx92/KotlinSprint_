@@ -2,11 +2,11 @@ package org.example.lesson_2
 
 fun main() {
 
-    val timeStartHours = 19      // время отправления "часы"
-    val timeStartMinutes = 39   // время отправления "минуты"
-    val travelTime = 457        // время в пути
-    var timeFinishHours: Int    // время прибития "часы"
-    var timeFinishMinutes: Int  // время прибытия "минуты"
+    val timeStartHours = 19
+    val timeStartMinutes = 39
+    val travelTime = 457
+    var timeFinishHours: Int
+    var timeFinishMinutes: Int
 
     val timeFinish = timeStartHours * HOUR + timeStartMinutes + travelTime
     timeFinishHours = timeFinish % DAY / HOUR
