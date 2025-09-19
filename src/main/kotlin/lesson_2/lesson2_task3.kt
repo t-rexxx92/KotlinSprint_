@@ -8,11 +8,11 @@ fun main() {
     var timeFinishHours: Int
     var timeFinishMinutes: Int
 
-    val timeFinish = timeStartHours * HOUR + timeStartMinutes + travelTime
-    timeFinishHours = timeFinish % DAY / HOUR
-    timeFinishMinutes = timeFinish % DAY % (timeFinishHours * HOUR)
+    val timeFinish = timeStartHours * MINUTES_IN_HOUR + timeStartMinutes + travelTime
+    timeFinishHours = timeFinish % MINUTES_IN_DAY / MINUTES_IN_HOUR
+    timeFinishMinutes = timeFinish % MINUTES_IN_DAY % (timeFinishHours * MINUTES_IN_HOUR)
     println("Время прибытия поезда Москва-Краснодар: ${"%02d".format(timeFinishHours)}:${"%02d".format(timeFinishMinutes)}")
 }
 
-const val HOUR = 60
-const val DAY = 1440
+const val MINUTES_IN_HOUR = 60
+const val MINUTES_IN_DAY = 1440
