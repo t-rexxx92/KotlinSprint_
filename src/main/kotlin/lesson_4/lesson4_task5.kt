@@ -1,17 +1,5 @@
 package org.example.lesson_4
 
-// Идеальные условия для вылета:
-// shipHealthStatus == true
-// crewSize >= 55 & <= 70
-// provision >50
-// weatherIsFavorable == true || false (любая в общем, не будем проверять)
-//
-// Допустимые(альтернативные) условия для вылета
-// shipHealhStatus == false
-// crewSize == 70
-// provision >= 50
-// weatherIsFavorable == true
-
 fun main() {
 
     print("Корабль не имеет повреждений(true/false) ")
@@ -23,8 +11,9 @@ fun main() {
     print("благоприятность метеоусловий(true/false) ")
     val weatherIsFavorable: Boolean = readln().toBoolean()
 
-    if((shipHealthStatus == true && crewSize in 55..70 && provision > 50) ||
-        (shipHealthStatus == false && crewSize == 70 && provision >= 50 && weatherIsFavorable == true)){
+    if ((shipHealthStatus == true && crewSize in 55..70 && provision > 50) ||
+        (shipHealthStatus == false && crewSize == 70 && provision >= 50 && weatherIsFavorable == true)
+    ) {
         println("Вылет разрешен!")
     }
 }
